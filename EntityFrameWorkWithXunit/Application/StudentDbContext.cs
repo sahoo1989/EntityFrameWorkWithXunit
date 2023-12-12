@@ -9,10 +9,6 @@ namespace EntityFrameWorkWithXunit.Application
         {
 
         }
-        public StudentDbContext()
-        {
-
-        }
         public DbSet<Student> students { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
