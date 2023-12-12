@@ -39,6 +39,7 @@ namespace EntityFrameWorkWithXunit.Controllers
         {
             await _studentService.SaveStudentAsync(student);
             return Ok();
+
         }
         [HttpPut]
         [Route("UpdateStudent")]
