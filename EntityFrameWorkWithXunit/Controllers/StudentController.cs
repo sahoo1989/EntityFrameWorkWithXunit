@@ -37,5 +37,18 @@ namespace EntityFrameWorkWithXunit.Controllers
             await _studentService.SaveStudentAsync(student);
             return Ok();
         }
+        [HttpPut]
+        public async Task<IActionResult> UpdateStudentAsync( Student student)
+        {
+            if (student == null)
+                return BadRequest();
+            var result = await _studentService.UpdateStudentAsync(student);
+            if (result == false)
+            { return BadRequest(); }
+
+
+            return NoContent();
+
+        }
     }
 }
