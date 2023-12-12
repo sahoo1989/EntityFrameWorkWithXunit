@@ -16,6 +16,7 @@ namespace EntityFrameWorkWithXunit.Controllers
         }
 
         [HttpGet]
+        [Route("GetAllStudent")]
         public async Task<ActionResult<List<Student>>> GetStudentsAsync()
         {
             var result = await _studentService.GetStudentsAsync();
@@ -26,18 +27,21 @@ namespace EntityFrameWorkWithXunit.Controllers
             return Ok(result);
         }
         [HttpGet]
+        [Route("GetStudentById/{id}")]
         public async Task<ActionResult<Student>> GetStudentsByIdAsync(int id)
         {
             var result = await _studentService.GetStudentByIdAsync(id);
             return Ok(result);
         }
         [HttpPost]
+        [Route("SaveStudent")]
         public async Task<IActionResult> SaveStudentAsync(Student student)
         {
             await _studentService.SaveStudentAsync(student);
             return Ok();
         }
         [HttpPut]
+        [Route("UpdateStudent")]
         public async Task<IActionResult> UpdateStudentAsync( Student student)
         {
             if (student == null)
