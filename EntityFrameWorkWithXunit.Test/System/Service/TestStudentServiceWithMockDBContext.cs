@@ -14,7 +14,7 @@ namespace EntityFrameWorkWithXunit.Test.System.Service
 {
     public class TestStudentServiceWithMockDBContext
     {
-        //[Fact]
+        [Fact]
         public async Task GetStudentByIdAsync_ShouldReturnCorrectStudent()
         {
             // Arrange

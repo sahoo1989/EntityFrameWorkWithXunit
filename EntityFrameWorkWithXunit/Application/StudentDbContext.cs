@@ -9,7 +9,11 @@ namespace EntityFrameWorkWithXunit.Application
         {
 
         }
-        public DbSet<Student> students { get; set; }
+        public StudentDbContext()
+        {
+
+        }
+        public virtual DbSet<Student> students { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

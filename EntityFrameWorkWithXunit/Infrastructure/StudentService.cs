@@ -13,7 +13,7 @@ namespace EntityFrameWorkWithXunit.Infrastructure
         }
         public async Task<Student> GetStudentByIdAsync(int id)
         {
-            var result = await _studentDbContext.students.Where(x => x.StudentId == id).FirstOrDefaultAsync();
+            var result = await _studentDbContext.students.FindAsync(id);
             return result;
         }
         public async Task<bool> DeleteStudentAsync(int id)
